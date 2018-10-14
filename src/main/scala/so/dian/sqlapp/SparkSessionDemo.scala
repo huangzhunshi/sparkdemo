@@ -7,6 +7,7 @@ import scala.collection.mutable.ListBuffer
 object SparkSessionDemo {
   def main(args: Array[String]): Unit = {
     val spark=SparkSession.builder().appName("sparksession").master("local[2]").enableHiveSupport().getOrCreate()
+
     //读取josn
     val table= spark.read.json("file:///mywork/yihui.json")
     table.show()
@@ -14,6 +15,7 @@ object SparkSessionDemo {
 
       /// TODO: 1.,定义计算的列表
       val list=new ListBuffer[InfoTest]
+
       x.foreach(b=>{
          //println(b)
           val infoTest=InfoTest(b.get(0).toString,b.get(1).toString)
