@@ -37,7 +37,7 @@ object SimapApp {
 
     //  窗口函数，每隔5秒计算10秒的数据
 //    lines.flatMap(x=>x.split(" ")).map(x=>(x,1))
-//      .reduceByKeyAndWindow(((x:Int,y:Int)=>x+y),Seconds(10),Seconds(5)).print()
+//      .reduceByKeyAndWindow(((x:Int,y:Int)=>x+y),Seconds(60),Seconds(5)).print()
 
 
     //lines.print()
