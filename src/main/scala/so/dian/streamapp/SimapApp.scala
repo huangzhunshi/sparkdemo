@@ -20,6 +20,7 @@ object SimapApp {
     val lines=ssc.socketTextStream("localhost",9997,StorageLevel.MEMORY_AND_DISK_SER)
 
     lines.flatMap(x=>x.split(" ")).map(x=>(x,1)).reduceByKey(_+_).print()
+
     //lines.print()
 
 
