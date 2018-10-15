@@ -17,6 +17,8 @@ object HiveContextDemo {
     hiveContext.sql("use testdb")
     hiveContext.table("stulog").show()
 
+
+
     //业务代码
     //  val table=sqlContext.read.format("json").load("/mywork/yihui.json")
     //  table.printSchema()
